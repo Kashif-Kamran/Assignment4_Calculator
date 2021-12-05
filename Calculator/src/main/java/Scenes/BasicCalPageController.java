@@ -1,6 +1,7 @@
 package Scenes;
 
 import Code.Calculator;
+import Code.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -26,7 +27,8 @@ public class BasicCalPageController
 	// For Getting Numbers from FXML
 	public void getNumbers(ActionEvent event)
 	{
-		String value = ((Button) event.getSource()).getText(); // reading text from button
+		String value;
+		value = ((Button) event.getSource()).getText(); // reading text from button
 		System.out.println(value);
 		if (!operatorPressed)
 		{
@@ -39,6 +41,7 @@ public class BasicCalPageController
 			strNum2 = lebalNum2.getText() + value;
 			lebalNum2.setText(strNum2);
 		}
+
 	}
 
 	public void allClear(ActionEvent event)
@@ -87,6 +90,30 @@ public class BasicCalPageController
 		strNum2 = "0";
 		lebalNum1.setText("0");
 		lebalNum2.setText("0");
+	}
+
+	public void SwitchToManu(ActionEvent event)
+	{
+		Main main = new Main();
+		try
+		{
+			main.changeScene("/Scenes/ManuPage.fxml");
+		} catch (Exception exc)
+		{
+			System.out.println("Page Not Found");
+		}
+	}
+
+	public void SwitchToCurrency(ActionEvent event)
+	{
+		Main main = new Main();
+		try
+		{
+			main.changeScene("/Scenes/CurrencyPage.fxml");
+		} catch (Exception exc)
+		{
+			System.out.println("Page Not Found");
+		}
 	}
 
 	public void getCalculationOperator(ActionEvent event)

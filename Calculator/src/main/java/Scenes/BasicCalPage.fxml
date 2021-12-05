@@ -18,11 +18,11 @@
                      <font>
                         <Font size="22.0" />
                      </font></Label>
-                  <Label fx:id="lebalResult" layoutX="121.0" layoutY="177.0" prefHeight="52.0" prefWidth="192.0">
+                  <Label fx:id="lebalResult" layoutX="121.0" layoutY="177.0" prefHeight="52.0" prefWidth="192.0" textAlignment="CENTER">
                      <font>
                         <Font size="22.0" />
                      </font></Label>
-                  <Label fx:id="lebalOperator" layoutX="12.0" layoutY="125.0" prefHeight="52.0" prefWidth="76.0">
+                  <Label fx:id="lebalOperator" layoutX="12.0" layoutY="125.0" prefHeight="52.0" prefWidth="76.0" textAlignment="CENTER">
                      <font>
                         <Font size="25.0" />
                      </font></Label>
@@ -30,6 +30,13 @@
                      <font>
                         <Font size="22.0" />
                      </font></Label>
+                  <HBox alignment="CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="52.0" prefWidth="325.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" text="Cal" />
+                        <Button mnemonicParsing="false" onAction="#SwitchToManu" text="Manu" />
+                        <Button mnemonicParsing="false" onAction="#SwitchToCurrency" text="Cur" />
+                     </children>
+                  </HBox>
                </children>
             </AnchorPane>
          </children></StackPane>
@@ -59,9 +66,9 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="325.0" spacing="25.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="7" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="8" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="9" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="7" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="8" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="9" />
             <Button mnemonicParsing="false" onAction="#getCalculationOperator" prefHeight="52.0" prefWidth="52.0" text="*">
                <font>
                   <Font size="15.0" />
@@ -69,11 +76,11 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="325.0" spacing="25.0">
+      <HBox alignment="CENTER" onDragDetected="#getNumbers" prefHeight="70.0" prefWidth="325.0" spacing="25.0">
          <children>
             <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="4" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="5" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="6" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="5" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="6" />
             <Button mnemonicParsing="false" onAction="#getCalculationOperator" prefHeight="52.0" prefWidth="52.0" text="-">
                <font>
                   <Font size="15.0" />
@@ -83,9 +90,9 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="325.0" spacing="25.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="1" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="2" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="3" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="1" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="2" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text="3" />
             <Button mnemonicParsing="false" onAction="#getCalculationOperator" prefHeight="52.0" prefWidth="52.0" text="+">
                <font>
                   <Font size="15.0" />
@@ -95,8 +102,8 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="325.0" spacing="25.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="127.0" text="0" />
-            <Button mnemonicParsing="false" onAction="#getNumbers" prefHeight="52.0" prefWidth="52.0" text=".">
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="127.0" text="0" />
+            <Button mnemonicParsing="false" onAction="#getNumbers" onDragDetected="#getNumbers" prefHeight="52.0" prefWidth="52.0" text=".">
                <font>
                   <Font size="24.0" />
                </font></Button>
