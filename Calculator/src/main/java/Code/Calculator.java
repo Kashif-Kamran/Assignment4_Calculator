@@ -79,4 +79,15 @@ public class Calculator
 		return result;
 	}
 
+	public double CalculatePercentageValueDiscount(double total, double percent)
+	{
+		double result = total / 100;
+		result = result * percent;
+		return result;
+	}
+
+	public double getRemainingPriceDiscount(double total, double percent)
+	{
+		return (total - CalculatePercentageValueDiscount(total, percent));
+	}
 }

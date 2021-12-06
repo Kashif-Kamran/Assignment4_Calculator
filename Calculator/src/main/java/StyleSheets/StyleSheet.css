@@ -1,0 +1,9 @@
+.root{	
+}
+.button{
+	-fx-background-color:transparent;
+	-fx-border-radius: 30px;
+}
+.button:hover{
+	-fx-background-color:red;
+}
