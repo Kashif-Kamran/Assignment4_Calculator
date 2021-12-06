@@ -30,4 +30,15 @@ public class ManuPageController
 		}
 	}
 
+	public void SwitchToDiscount(ActionEvent event)
+	{
+		Main main = new Main();
+		try
+		{
+			main.changeScene("/Scenes/DiscountPage.fxml");
+		} catch (Exception exc)
+		{
+			System.out.println("Page Not Found " + exc);
+		}
+	}
 }

@@ -74,11 +74,8 @@ public class Calculator
 	{
 		double result = 0;
 		double dur = checkDuration(duration);
-		System.out.println("result : " + result + " \t Duration: " + dur);
 		double interest = CalculateInterest(invest, percentage, duration);
-		System.out.println("result : " + result + " \t Duration: " + dur + " \t Interest : " + interest);
 		result = (invest * dur) + interest;
-		System.out.println("result : " + result + " \t Interest : " + interest);
 		return result;
 	}
 
